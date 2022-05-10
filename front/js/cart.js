@@ -20,6 +20,28 @@ else {
 
        let productImg = document.createElement("img");
        productDivImg.apprendchild(productImg);
+       productImg.src = article.articleImg;
+       productImg.alt = article.articleImgAlt;
 
+       // Insertion de l'élément "div --> cart__item__content"
+
+       let productItemContent = document.createElement("div");
+       productArticle.appendChild(productItemContent);
+       productItemContent.classeName = "cart__item__content";
+
+       // Insertion de l'élément "div --> cart__item__content"
+
+       let productItemContentTitlePrice = document.createElement("div");
+        productItemContentTitlePrice.appendChild(productItemContentTitlePrice);
+        productItemContentTitlePrice.className = "cart__item__content";
+
+
+       // insertion du titre h2
+       
+       let producTitle = document.createElement("h2");
+       productItemContentTitlePrice.appendChild(productTitle);
+       producTitle.innerHTML = article.articleName;
+
+       // Insertion du prix
     });
 }
