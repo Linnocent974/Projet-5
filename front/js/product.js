@@ -16,7 +16,7 @@ function getArticle() {
         return res.json();
     })
     .catch((error) => {
-        console.log("Accès à l'API impossible... Déso frérot !!!");
+        console.log("Accès à l'API impossible");
     })
 
 
