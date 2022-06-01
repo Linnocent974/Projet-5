@@ -74,8 +74,9 @@ function getArticle() {
         // Conditions couleur + quantité entre 1 et 100
 
         sendToCartBtn.addEventListener("click", (event) => {                                    // ---------- Je réagis au click sur le bouton ----------
-            if (selectedQuantity.value > 0 && selectedQuantity.value <=100 && selectedColor.value != 0){
-
+            if (!selectedQuantity.value || selectedQuantity.value < 1 || selectedQuantity.value > 100) return alert("veuillez choissir une quantité comprise 1 a 100 svp"); {
+                //condition couleur
+            if (!selectedColor.value) return alert("Merci de choisir une couleur");
         let colorChoice = selectedColor.value;
         let quantityChoice = selectedQuantity.value;
 
